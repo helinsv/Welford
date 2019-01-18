@@ -10,7 +10,8 @@
 	justify-content: space-between
 	align-items: center	
 
-	.about-top-item		
+	.about-top-item	
+		width: 50%	
 		margin: 0 10px
 		position: relative		
 		transition: all 1s	
@@ -62,9 +63,6 @@
 					width: 3rem
 					margin: 0 auto					
 					background-color: $color-font-light	
-			
-
-		
 
 .about-menu
 	margin: 0 -10px
@@ -74,6 +72,7 @@
 	align-items: center
 
 	.about-menu-item
+		width: 33.3%
 		margin: 0 10px
 		position: relative
 
@@ -99,7 +98,83 @@
 			p
 				margin: 5% 0
 			
+.favorites
+	margin: 40px 0
+	text-align: center
 
+	h2
+		margin: 10px 0 0 0		
+		text-transform: uppercase
+		font-weight: normal
+		color: $color-font-dark
+		font-size: 1.2rem
+
+	p
+		margin: 5px 0	
+		font-size: 1rem
+		font-style: italic
+
+	.favorites-items
+		margin: 60px -10px
+		width: 100%
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-start	
+
+		
+
+		.favorite-item	
+			width: 25%
+			margin: 0 10px
+			position: relative		
+
+			img
+				width: 100%
+
+			h4
+				text-transform: uppercase
+				font-weight: normal
+				color: $color-font-dark
+				font-size: 1rem
+				margin: 1rem 0 0.3rem 0
+				line-height: 1
+
+			.prise				
+				font-weight: normal
+				color: $color-font-main
+				font-size: 1rem
+				line-height: 1
+				margin: 0
+				padding: 0 0.1rem
+				display: inline-block
+		
+			.new-prise
+				color: $color-font-title
+
+			.old-prise
+				color: #808080	
+				text-decoration: line-through
+
+			.new
+				position: absolute
+				top: -1rem
+				left: 0
+				right: 0
+				display: block
+				width: 2.5rem
+				height: 2.5rem
+				margin: 0 auto
+				border-radius: 50%
+				text-align: center
+				background-color: $color-font-dark
+				font-size: 0.75rem
+				font-style: italic
+				line-height: 2.5rem
+				content: 'Sale'
+				color: $color-font-light
+			
+			
 
 .hidden
 	display: none
