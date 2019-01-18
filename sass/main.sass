@@ -173,8 +173,50 @@
 				line-height: 2.5rem
 				content: 'Sale'
 				color: $color-font-light
-			
-			
+
+footer
+	margin: 1rem 0 4rem 0
+	text-align: center
+
+	nav
+		border-top: 1px solid $color-font-main
+		border-bottom: 1px solid $color-font-main
+		text-transform: uppercase
+		padding: 0.5rem
+		
+
+		.bottom-menu
+			@extend %menu			
+
+			.bottom-menu-item
+				@extend %menu-item
+
+				.bottom-menu-link
+					@extend %menu-link							
+					@include button-color($color-font-main, $color-font-dark, $color-font-light)	
+
+	.media
+		margin: 2rem 0
+		color: $color-font-title
+		font-size: 0.8rem
+
+		i
+			border-radius: 50%
+			border: solid 1px $color-font-title
+			padding: 0.8rem
+			margin: 0 1.5rem
+				
+
+	.copyright
+		margin: 2rem 0 1rem 0
+		color: $color-font-main
+		text-transform: uppercase
+
+	.autor
+		font-style: italic
+		margin: 1rem 0 2rem 0 
+		
+						
 
 .hidden
 	display: none

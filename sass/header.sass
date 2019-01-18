@@ -42,24 +42,16 @@ header
 			font-size: 1.3rem
 
 		.top-menu
-			list-style: none
-			font-size: 1rem
-			font-size: 0px
+			@extend %menu
 
 			.top-menu-item
-				//padding: 0 30px
-				display: inline
+				@extend %menu-item
 
 				.top-menu-link
-					cursor: pointer
-					color: $color-font-dark
-					text-decoration: none
-					padding: 0.125rem 1.87rem
-					font-size: 1rem
+					@extend %menu-link						
+					@include button-color($color-font-dark, $color-font-light, $color-font-title) 				
 
-					&:hover
-						color: $color-font-light
-						background-color: $color-font-title
+
 
 
 	
