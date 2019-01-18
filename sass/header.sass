@@ -1,0 +1,127 @@
+@import "vars.sass"
+
+body
+	font-size: $base-font-size
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	//font-family: "RobotoRegular", sans-serif
+	font-family: $font-family
+	overflow-x: hidden
+
+.container 
+	max-width: 1180px
+	margin: 0 auto
+	padding: 0 10px
+	color: $color-font-main
+
+header
+	border-bottom: 1px solid $color-border
+
+	.logo
+		margin: 40px 0 30px 0
+
+		h1
+			font-size: 1.5rem
+			color: $color-font-dark
+			text-align: center
+			text-transform: uppercase
+	
+	nav
+		margin: 0 0 10px 0
+		color: $color-font-dark
+		text-transform: uppercase
+
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+
+		.search,
+		.basket 
+			font-size: 1.3rem
+
+		.top-menu
+			list-style: none
+			font-size: 1rem
+			font-size: 0px
+
+			.top-menu-item
+				//padding: 0 30px
+				display: inline
+
+				.top-menu-link
+					cursor: pointer
+					color: $color-font-dark
+					text-decoration: none
+					padding: 0.125rem 1.87rem
+					font-size: 1rem
+
+					&:hover
+						color: $color-font-light
+						background-color: $color-font-title
+
+.about-top
+	margin: 20px -10px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+	.about-top-item
+		margin: 0 10px
+
+		img
+			width: 100%
+			opacity: 1
+			transition: all 0.5s
+		
+			&:hover + .hover-text
+				cursor: pointer
+				display: block
+
+		.hover-text
+			display: none	
+			width: 100%
+			background-color: $color-background
+			text-align: center
+
+.about-menu
+	margin: 0 -10px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+	.about-menu-item
+		margin: 0 10px
+		position: relative
+
+		img
+			width: 100%
+
+		.describe
+			position: absolute
+			bottom: 7%
+			left: 0
+			margin: 0 5%
+			padding: 5%
+			background-color: #fff
+			width: calc(100% - 20%)
+			text-align: center
+
+			h3
+				margin: 5% 0
+				color: $color-font-title
+				text-transform: uppercase	
+
+			p
+				margin: 5% 0
+			
+
+
+.hidden
+	display: none
+
+
+	
