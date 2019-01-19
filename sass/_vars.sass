@@ -13,27 +13,29 @@ $color-border: #e5e5e5
 $color-background: #9ab4b3
 
 /*font*/
-$font-family: 'Oswald', sans-serif 
+$font-family: 'RobotoRegular', sans-serif 
+$font-italy: 'CrimsonText', sans-serif 
 $base-font-size: 16px;
 
 %menu 
     list-style: none
     font-size: 0px
+    padding: 0
 
 %menu-item
     display: inline
 
 %menu-link
-    cursor: pointer
     text-decoration: none
     padding: 0.125rem 1.87rem
     font-size: 1rem
-    transition: all 0.5s 
 
 
-@mixin button-color($color, $color-hover, $color-bg-hover) 
-    color: $color    
+@mixin link-color($color, $color-hover, $color-bg-hover) 
+    color: $color   
+    transition: all 0.5s	 
 
     &:hover 
         color: $color-hover
         background-color: $color-bg-hover
+        cursor: pointer

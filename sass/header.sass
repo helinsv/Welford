@@ -1,11 +1,22 @@
 @import "vars.sass"
 
-body
+@font-face 
+	font-family: "CrimsonText"
+	src: url("../fonts/CrimsonText/CrimsonText-Italic.ttf")
+
+@font-face 
+	font-family: "RobotoRegular"
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot")
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype")
+	font-style: normal
+	font-weight: normal
+html 
 	font-size: $base-font-size
+	
+body	
 	min-width: 320px
 	position: relative
 	line-height: 1.6
-	//font-family: "RobotoRegular", sans-serif
 	font-family: $font-family
 	overflow-x: hidden
 
@@ -14,6 +25,11 @@ body
 	margin: 0 auto
 	padding: 0 10px
 	color: $color-font-main
+
+a
+	text-decoration: none
+	cursor: pointer
+	color: inherit	
 
 header
 	border-bottom: 1px solid $color-border
@@ -38,18 +54,23 @@ header
 		align-items: center
 
 		.search,
-		.basket 
+		.basket,
+		.bar 
 			font-size: 1.3rem
+			@include link-color($color-font-dark, $color-font-title, $color-font-light) 
+		
+		.bar
+			display: none
 
 		.top-menu
 			@extend %menu
 
 			.top-menu-item
-				@extend %menu-item
+				@extend %menu-item				
 
 				.top-menu-link
 					@extend %menu-link						
-					@include button-color($color-font-dark, $color-font-light, $color-font-title) 				
+					@include link-color($color-font-dark, $color-font-light, $color-font-title) 				
 
 
 
