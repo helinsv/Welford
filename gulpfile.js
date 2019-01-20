@@ -17,7 +17,8 @@ gulp.task('browser-sync', ['styles', 'scripts'], function() {
 });
 
 gulp.task('styles', function () {
-	return gulp.src('sass/*.sass')
+	return gulp.src(
+		'sass/*.sass', [''])
 	.pipe(sass({
 		includePaths: require('node-bourbon').includePaths
 	}).on('error', sass.logError))
@@ -30,19 +31,34 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/animate/animate-css.js',
+		'./node_modules/jquery/dist/jquery.min.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 
+gulp.task('css-libs', function() {
+	return gulp.src([		
+		'./node_modules/@fortawesome/fontawesome-free/css/all.css',
+		'./node_modules/normalize.css/normalize.css',
+		'./app/libs/animate/animate.css'		
+		])
+		.pipe(concat('libs.css'))
+		.pipe(cleanCSS())
+		.pipe(gulp.dest('./app/css/'));		
+});
+
+gulp.task('fonts', function() {
+	return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+	  .pipe(gulp.dest('./app/webfonts'))
+  })
+
 gulp.task('watch', function () {
 	gulp.watch('sass/*.sass', ['styles']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('app/libs/**/*.js', ['scripts']);	
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'css-libs', 'fonts']);

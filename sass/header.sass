@@ -2,14 +2,15 @@
 
 @font-face 
 	font-family: "CrimsonText"
-	src: url("../fonts/CrimsonText/CrimsonText-Italic.ttf")
+	src: url("../webfonts/CrimsonText/CrimsonText-Italic.ttf")
 
 @font-face 
 	font-family: "RobotoRegular"
-	src: url("../fonts/RobotoRegular/RobotoRegular.eot")
-	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype")
+	src: url("../webfonts/RobotoRegular/RobotoRegular.eot")
+	src: url("../webfonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../webfonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../webfonts/RobotoRegular/RobotoRegular.ttf") format("truetype")
 	font-style: normal
 	font-weight: normal
+
 html 
 	font-size: $base-font-size
 	
@@ -70,9 +71,4 @@ header
 
 				.top-menu-link
 					@extend %menu-link						
-					@include link-color($color-font-dark, $color-font-light, $color-font-title) 				
-
-
-
-
-	
+					@include link-color($color-font-dark, $color-font-light, $color-font-title) 	
