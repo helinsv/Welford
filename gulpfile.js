@@ -1,7 +1,7 @@
-var gulp         = require('gulp'),
+var     gulp         = require('gulp'),
 		sass         = require('gulp-sass'),
 		autoprefixer = require('gulp-autoprefixer'),
-		cleanCSS    = require('gulp-clean-css'),
+		cleanCSS     = require('gulp-clean-css'),
 		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
@@ -30,13 +30,11 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'./app/libs/modernizr/modernizr.js',
 		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/waypoints/waypoints.min.js',
 		'./app/libs/animate/animate-css.js',
 		])
 		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 
